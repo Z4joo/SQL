@@ -1,1 +1,1 @@
-# SQL
+# SQL ---> polaczenie z baza danych
