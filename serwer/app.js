@@ -39,6 +39,24 @@ app.get("/select", (req, res)=>{
 }) 
 
 
+app.get("/add/:Imie/:Nazwisko/:Klasa", (req, res)=> {
+    const imie = req.params.Imie
+    const nazwisko = req.params.Nazwisko
+    const klasa = req.params.Klasa
+
+   
+   
+    const sql = `INSERT INTO test (Imie,Nazwisko,Klasa) VALUES ('${imie}' , '${nazwisko}' , '${klasa}')` 
+    con.query(sql, function(err, result, fileds){
+        if(err) console.log(err)
+
+        else res.send("dodano rekord")
+    })
+
+
+})
+
+
 app.listen(port, ()=>{
     console.log("aplikacja dziala na porcie " + port)
 }) 
