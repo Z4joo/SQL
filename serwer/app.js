@@ -29,7 +29,7 @@ app.get("/",(req, res)=>{
 
 
 app.get("/select", (req, res)=>{
-    const sql = "SELECT * FROM sql"
+    const sql = "SELECT * FROM test"
     con.query(sql, function(err, result, fileds){
         if(err)  console.log(err)
         
